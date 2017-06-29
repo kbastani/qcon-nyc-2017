@@ -112,7 +112,7 @@ The Todo UI will be available at `http://localhost:8080`. It's recommended that 
 
 ### Production Environment
 
-The production environment for this application is managed by Cloud Foundry. You can use any up-to-date distributed of Cloud Foundry that you'd like. For this workshop we will try to use [Pivotal Web Services](http://run.pivotal.io). Because PWS requires that you provide billing information when signing up, you can alternatively use [PCF Dev](https://pivotal.io/platform/pcf-tutorials/getting-started-with-pivotal-cloud-foundry-dev/introduction) to run Cloud Foundry on your development machine.
+The production environment for this application is managed by Cloud Foundry. You can use any up-to-date distribution of Cloud Foundry that you'd like. For this workshop, we will try to use [Pivotal Web Services](http://run.pivotal.io). Because PWS requires that you provide billing information when signing up, you can alternatively use [PCF Dev](https://pivotal.io/platform/pcf-tutorials/getting-started-with-pivotal-cloud-foundry-dev/introduction) to run Cloud Foundry on your development machine.
 
 #### Concourse
 
