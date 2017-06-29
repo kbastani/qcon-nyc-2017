@@ -75,7 +75,7 @@ To make this easier, I've created a bootstrap shell script that will orchestrate
 
     $ sh run.sh
 
-This script will run each of the 4 JVM applications in this example in a single terminal. **This script will kill any other running Java processes** running on your development machine before starting. Make sure to comment that line out before running the script if your running local Java processes that should not be shut down. If you're using Windows, make sure to run this command in bash.
+This script will run each of the 4 JVM applications in this example in a single terminal. **This script will kill any other running Java processes**. Make sure that you comment out the `killall java` line before executing the script, if you're running any Java processes that should not be shut down. If you're using Windows, make sure to run this command using bash.
 
 #### Eureka
 
