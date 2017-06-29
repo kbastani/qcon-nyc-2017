@@ -1,0 +1,19 @@
+---
+platform: linux
+image_resource:
+  type: docker-image
+  source:
+    repository: maven
+    tag: alpine
+inputs:
+- name: todo-core
+outputs:
+- name: artifact
+run:
+  path: sh
+  args:
+  - -exc
+  - |
+    cd todo-core \
+    && mvn clean package \
+    && mv todo-core/target/todo-core*.jar ../artifact/todo-core.jar

@@ -1,0 +1,13 @@
+---
+spring:
+  profiles:
+    include: development
+zuul:
+  routes:
+    todo-core: /api/**
+---
+spring:
+  profiles: cloud
+zuul:
+  routes:
+    todo-core: /api/**

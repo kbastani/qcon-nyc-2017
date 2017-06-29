@@ -1,0 +1,37 @@
+server:
+  port: 3333
+---
+spring:
+  profiles: development
+  datasource:
+    platform: org.hibernate.dialect.H2Dialect
+---
+spring:
+  profiles: test
+eureka:
+  client:
+    enabled: false
+---
+spring:
+  profiles: cloud
+  datasource:
+    platform: org.hibernate.dialect.MariaDBDialect
+    initialize: true
+  data:
+    mongodb:
+      uri: ${vcap.services.todo-mongo.credentials.uri}
+  jpa:
+    hibernate:
+      ddl-auto: create
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]:localhost}
+    nonSecurePort: 80
+    metadataMap:
+      instanceId: ${vcap.application.instance_id:${spring.application.name}:${spring.application.instance_id:${server.port}}}
+    leaseRenewalIntervalInSeconds: 5
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: ${vcap.services.discovery-service.credentials.uri:http://localhost:8761}/eureka/
