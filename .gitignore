@@ -7,8 +7,6 @@
 
 .idea
 
-.pipeline-config.yml
-
 config/target
 
 target/
